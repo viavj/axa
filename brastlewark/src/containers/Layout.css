@@ -1,0 +1,63 @@
+p{
+    margin: 0;
+    text-align: center;
+}
+
+.base {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-item-mobile{
+    width: 80%;
+  }
+
+  .flex-item-desktop {
+    width: 25%;
+  }
+
+  img{
+      margin: auto;
+      display: block;
+      max-width: 100%;
+      max-height: 150px;
+  }
+
+
+  /* .professions{
+    background: #dfdfdf;
+    border-radius: 5px;
+    padding: 5px;
+  } */
+
+
+  a {
+    text-decoration: none;
+    color: gray;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrap { 
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }  

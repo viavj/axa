@@ -1,0 +1,12 @@
+.professions p,
+friends p{
+    margin: 0 5px;
+}
+
+.professions{
+    color: green;
+}
+
+.friends {
+    color: #ff7c00;
+}

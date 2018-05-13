@@ -1,7 +1,7 @@
 import * as actionTypes from '../actionTypes';
 
 const initialState = {
-    layoutType: ''
+    layoutType: '',
 }
 
 const reducer = (state = initialState, action) => {

@@ -1,20 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-import { Switch, Route } from 'react-router-dom';
-import * as routes from '../shared/navigation/routes';
-
+import * as actionCreators from '../store/actionCreators';
+import './Layout.css';
 import Home from './home/home';
-import GnomePage from './gnomePage/gnomePage';
 
 class Layout extends React.Component {
 
+    componentWillMount() {
+        this.props.getLayoutType();
+    }
+
     render() {
         return (
-            <Switch>
-                <Route path={routes.BASE} exact component={Home} />
-                <Route path={`${routes.GNOME_PAGE}/:id`} component={GnomePage} />
-            </Switch>
+            <Home/>
         )
     }
 }
@@ -27,7 +25,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        getLayoutType: () => dispatch(actionCreators.getLayoutType())
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Layout));
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);
